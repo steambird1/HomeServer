@@ -1,0 +1,8 @@
+D:\Projects\EasyPrinter\EasyPrinter\bin\EasyPrinter.dll
+D:\Projects\EasyPrinter\EasyPrinter\bin\EasyPrinter.pdb
+D:\Projects\EasyPrinter\EasyPrinter\bin\EasyPrinter.xml
+D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.Resources.resources
+D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.vbproj.GenerateResource.Cache
+D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.dll
+D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.xml
+D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.pdb

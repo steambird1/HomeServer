@@ -1,0 +1,730 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EasyPrinter
+</name>
+</assembly>
+<members>
+<member name="F:EasyPrinter.AdvancedPicturePrinter.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.HyperLink1">
+	<summary>
+HyperLink1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.pictureloads">
+	<summary>
+pictureloads 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.printstate">
+	<summary>
+printstate 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.selprinters">
+	<summary>
+selprinters 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.DocCopies">
+	<summary>
+DocCopies 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.PageOrd">
+	<summary>
+PageOrd 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.printerr">
+	<summary>
+printerr 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.PrintModeSelector">
+	<summary>
+PrintModeSelector 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.PrintEach">
+	<summary>
+PrintEach 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.linecount">
+	<summary>
+linecount 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Zoomer">
+	<summary>
+Zoomer 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.checktoaddname">
+	<summary>
+checktoaddname 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Submittor">
+	<summary>
+Submittor 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.PrintLayout">
+	<summary>
+PrintLayout 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.HorzN">
+	<summary>
+HorzN 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.VertN">
+	<summary>
+VertN 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.HorzMargin">
+	<summary>
+HorzMargin 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.VertMargin">
+	<summary>
+VertMargin 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.StrOption">
+	<summary>
+StrOption 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label1">
+	<summary>
+Label1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label2">
+	<summary>
+Label2 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label3">
+	<summary>
+Label3 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label4">
+	<summary>
+Label4 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label5">
+	<summary>
+Label5 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.Label6">
+	<summary>
+Label6 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.LayoutSub">
+	<summary>
+LayoutSub 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain1.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="P:EasyPrinter.FileExplore.CurrentPath">
+	<summary>
+ 目录结尾包含斜杠。
+ </summary>
+	<value>当前环境目录。</value>
+</member><member name="M:EasyPrinter.FileExplore.FindFreefile(System.String)">
+	<summary>
+ 部分服务依赖于 Server.MapPath，请勿更改。
+ 在服务器根目录下找到下一个有效文件
+ </summary>
+	<param name="fix">文件的后缀名。</param>
+	<returns>文件路径。</returns>
+</member><member name="M:EasyPrinter.FileExplore.GetFilename(System.String)">
+	<summary>
+ 从提供的路径中得到文件名 (可以作为 <code>My.Computer.FileSystem.GetName</code> 别名)。
+ </summary>
+	<param name="Path">文件的路径。</param>
+	<returns>文件名。</returns>
+</member><member name="M:EasyPrinter.FileExplore.GetSpaceInfo(System.Double)">
+	<summary>
+ 获取文件大小的合适表示方式。
+ </summary>
+	<param name="Value">MB 为大小的文件大小。</param>
+	<returns>合适的字符串表示。</returns>
+</member><member name="F:EasyPrinter.index.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.printstate">
+	<summary>
+printstate 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.selprinters">
+	<summary>
+selprinters 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.textsizer">
+	<summary>
+textsizer 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.isbold">
+	<summary>
+isbold 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.DocCopies">
+	<summary>
+DocCopies 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.PageOrd">
+	<summary>
+PageOrd 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.contents">
+	<summary>
+contents 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.Submittor">
+	<summary>
+Submittor 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WriteToPrint.printerr">
+	<summary>
+printerr 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="M:EasyPrinter.WebFormMain.GetSpaceInfo(System.Double)">
+	<summary>
+ 获取文件大小的合适表示方式。
+ </summary>
+	<param name="Value">MB 为大小的文件大小。</param>
+	<returns>合适的字符串表示。</returns>
+</member><member name="F:EasyPrinter.FileExplore.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ScriptManagerMain">
+	<summary>
+ScriptManagerMain 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FileModifiers">
+	<summary>
+FileModifiers 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ErrorDisplay">
+	<summary>
+ErrorDisplay 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FreeFSpace">
+	<summary>
+FreeFSpace 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FreeDSpace">
+	<summary>
+FreeDSpace 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.PrevDirs">
+	<summary>
+PrevDirs 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CurrentPosition">
+	<summary>
+CurrentPosition 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.GotoPosition">
+	<summary>
+GotoPosition 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.EnterDirectory">
+	<summary>
+EnterDirectory 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CreateFileHelper">
+	<summary>
+CreateFileHelper 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CreateFile">
+	<summary>
+CreateFile 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.DeleteFile">
+	<summary>
+DeleteFile 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CreateCopy">
+	<summary>
+CreateCopy 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.RenameFile">
+	<summary>
+RenameFile 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.DownloadFiles">
+	<summary>
+DownloadFiles 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CreateDirectory">
+	<summary>
+CreateDirectory 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.UpdateProgressPanel">
+	<summary>
+UpdateProgressPanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FileRenamePanel">
+	<summary>
+FileRenamePanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.OriginalFilename">
+	<summary>
+OriginalFilename 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.NewFilename">
+	<summary>
+NewFilename 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ConfirmRename">
+	<summary>
+ConfirmRename 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.AbandonRename">
+	<summary>
+AbandonRename 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.DirectoryCreater">
+	<summary>
+DirectoryCreater 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.NewDirectoryName">
+	<summary>
+NewDirectoryName 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ConfirmCreater">
+	<summary>
+ConfirmCreater 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.AbandonCreater">
+	<summary>
+AbandonCreater 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.SelectAll">
+	<summary>
+SelectAll 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.SelectAllVert">
+	<summary>
+SelectAllVert 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FileViewers">
+	<summary>
+FileViewers 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.FileProperty">
+	<summary>
+FileProperty 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="P:EasyPrinter.My.MyWebExtension.Computer">
+	<summary>
+ 返回有关主计算机的信息。
+ </summary>
+</member><member name="P:EasyPrinter.My.MyWebExtension.User">
+	<summary>
+ 返回当前 Web 用户的信息。
+ </summary>
+</member><member name="P:EasyPrinter.My.MyWebExtension.Request">
+	<summary>
+ 返回 Request 对象。
+ </summary>
+</member><member name="P:EasyPrinter.My.MyWebExtension.Response">
+	<summary>
+ 返回 Response 对象。
+ </summary>
+</member><member name="P:EasyPrinter.My.MyWebExtension.Log">
+	<summary>
+ 返回 Asp 日志对象。
+ </summary>
+</member><member name="T:EasyPrinter.My.MyWebExtension">
+	<summary>
+ 用于定义 Web 项目的“My 命名空间”中可用属性的模块。
+ </summary>
+	<remarks></remarks>
+</member><member name="F:EasyPrinter.WebFormMain.scm">
+	<summary>
+scm 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.FreeDSpace">
+	<summary>
+FreeDSpace 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.printstate">
+	<summary>
+printstate 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.FileTypes">
+	<summary>
+FileTypes 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.selprinters">
+	<summary>
+selprinters 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.DOCPanel">
+	<summary>
+DOCPanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.DocCopies">
+	<summary>
+DocCopies 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.PageOrd">
+	<summary>
+PageOrd 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.FileUpload">
+	<summary>
+FileUpload 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.Submittor">
+	<summary>
+Submittor 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.printerr">
+	<summary>
+printerr 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.HyperLink1">
+	<summary>
+HyperLink1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.HyperLink2">
+	<summary>
+HyperLink2 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member>
+</members>
+</doc>
