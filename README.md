@@ -46,7 +46,7 @@
         End With
     End Sub
 ```
-2. 根据共享文件位置的不同，修改第 7 行（如
+2. 根据共享文件位置的不同，修改 FileExplore.aspx.vb 第 7 行（如
 ```vb.net
 Public Const FileRoot As String = "D:\example"
 ```
