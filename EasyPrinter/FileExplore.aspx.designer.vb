@@ -41,15 +41,6 @@ Partial Public Class FileExplore
     Protected WithEvents FileModifiers As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
-    '''ErrorDisplay 控件。
-    '''</summary>
-    '''<remarks>
-    '''自动生成的字段。
-    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    '''</remarks>
-    Protected WithEvents ErrorDisplay As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''FreeFSpace 控件。
     '''</summary>
     '''<remarks>
@@ -140,6 +131,15 @@ Partial Public Class FileExplore
     Protected WithEvents CreateCopy As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''FileMover 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents FileMover As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''RenameFile 控件。
     '''</summary>
     '''<remarks>
@@ -174,6 +174,15 @@ Partial Public Class FileExplore
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
     Protected WithEvents UpdateProgressPanel As Global.System.Web.UI.UpdateProgress
+
+    '''<summary>
+    '''ErrorDisplay 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents ErrorDisplay As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''FileRenamePanel 控件。
@@ -282,6 +291,42 @@ Partial Public Class FileExplore
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
     Protected WithEvents AbandonDelete As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''SetMoving 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents SetMoving As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''MovePosition 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents MovePosition As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ConfirmMoving 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents ConfirmMoving As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''AbandonMoving 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents AbandonMoving As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''SelectAll 控件。

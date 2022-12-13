@@ -48,6 +48,7 @@ Public Class WebFormMain
         ftsearch.Add("xls", 3)
         ftsearch.Add("xlsx", 3)
         ftsearch.Add("csv", 3)
+        ftsearch.Add("pdf", 4)
         ' Add upper-case conditions
         Dim ftsearch_old As Hashtable = New Hashtable(ftsearch)
         For Each i In ftsearch_old
@@ -137,7 +138,14 @@ Public Class WebFormMain
                     wordapp.Quit()
                     Response.Write("<script>alert('打印成功！');</script>")
                 Catch ex As Exception
-                    Response.Write("<script>alert('内部服务器错误：调用 word 应用程序时出现 " & ex.Message & " 错误。请尝试稍后再试。')</script>")
+                    Response.Write("<script>alert('内部服务器错误：调用 excel 应用程序时出现 " & ex.Message & " 错误。请尝试稍后再试。')</script>")
+                End Try
+            Case 4
+                Try
+                    Shell(Server.MapPath("Sumatra.exe") & " -print-to-default """ & fr & """", AppWinStyle.MinimizedNoFocus, True)
+                    Response.Write("<script>alert('打印成功！');</script>")
+                Catch ex As Exception
+                    Response.Write("<script>alert('内部服务器错误：调用 Sumatra 应用程序时出现 " & ex.Message & " 错误。请尝试稍后再试。')</script>")
                 End Try
             Case Else
                 Try
@@ -179,10 +187,18 @@ Public Class WebFormMain
     End Sub
 
     Protected Sub FileTypes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FileTypes.SelectedIndexChanged
+        PageOrd.Enabled = True
+        DocCopies.Enabled = True
+        selprinters.Enabled = True
         If FileTypes.SelectedIndex = 3 Then
+            PageOrd.SelectedIndex = 0
             PageOrd.Enabled = False
-        Else
-            PageOrd.Enabled = True
+        ElseIf FileTypes.SelectedIndex = 4 Then
+            PageOrd.Enabled = False
+            DocCopies.Text = "1"
+            DocCopies.Enabled = False
+            selprinters.SelectedIndex = 0
+            selprinters.Enabled = False
         End If
     End Sub
 End Class

@@ -73,9 +73,26 @@ Public Class FileExplore
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             ' 第一次显示!
+
+            Dim Queryer As String = HttpContext.Current.Request.Url.Query
+            If Queryer.Length > 0 AndAlso Queryer(0) = "?"c Then
+                Queryer = Queryer.Substring(1)
+            End If
+            Dim Queries() As String = Split(Queryer, "&")
+            For Each i In Queries
+                Dim Para() As String = Split(i, "=", 2)
+                If Para.Count() < 2 Then
+                    Continue For
+                End If
+                Select Case Para(0)
+                    Case "path"
+                        CurrentPosition.Text = Encoding.UTF8.GetString(HttpServerUtility.UrlTokenDecode(Para(1)))
+                End Select
+            Next
             RefreshPosition()
         End If
         ' 无论如何都加载大小信息
+        
     End Sub
 
     Protected Sub PrevDirs_Click(sender As Object, e As EventArgs) Handles PrevDirs.Click
@@ -120,7 +137,9 @@ Public Class FileExplore
         With My.Computer.FileSystem
             For Each it In .GetDirectories(CurrentPath)
                 Dim i As String = GetFilename(it)
-                FileViewers.Items.Add(New ListItem(GenerateDownloadName("[目录] " & i, it), i))
+                Dim GeneratedDirectoryName As String = GenerateDownloadName("[目录] " & i, it)
+                Dim Targets As String = HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes(CurrentPosition.Text & i & "/"))
+                FileViewers.Items.Add(New ListItem("<a href=""" & Request.Path & "?path=" & Targets & """>" & GeneratedDirectoryName & "</a>", i))
             Next
             For Each it In .GetFiles(CurrentPath)
                 Dim i As String = GetFilename(it)
@@ -287,6 +306,7 @@ Public Class FileExplore
         'Response.AddHeader("Content-Disposition", "attachment;filename=Download.zip")
         'Response.TransmitFile(ZIPTarget)
         Dim Visitable As String = My.Computer.FileSystem.GetName(ZIPTarget)
+        UpdateDiskInfo()
         ReportError("创建成功，点击<a href=""" & Visitable & """ download=""" & Visitable & """>此处</a>下载")
     End Sub
 
@@ -349,5 +369,51 @@ Public Class FileExplore
         ReportError("删除成功!")
         RefreshPosition()
         ConfirmDeletion.Visible = False
+    End Sub
+
+    Protected Sub FileMover_Click(sender As Object, e As EventArgs) Handles FileMover.Click
+        MovePosition.Text = CurrentPosition.Text
+        SetMoving.Visible = True
+    End Sub
+
+    Protected Sub AbandonMoving_Click(sender As Object, e As EventArgs) Handles AbandonMoving.Click
+        SetMoving.Visible = False
+    End Sub
+
+    Protected Sub ConfirmMoving_Click(sender As Object, e As EventArgs) Handles ConfirmMoving.Click
+        If FileViewers.SelectedIndex < 0 Then
+            Exit Sub
+        End If
+        If MovePosition.Text.Length <= 0 OrElse MovePosition.Text(MovePosition.Text.Length - 1) <> "/"c OrElse (Not My.Computer.FileSystem.DirectoryExists(FileRoot & MovePosition.Text)) Then
+            ReportError("不是有效的目录名: " & MovePosition.Text & "。目录名必须以 ""/"" 结尾并存在！")
+            Exit Sub
+        End If
+        Dim succeed As Boolean = True
+        Try
+            For Each it In FileViewers.Items
+                Dim i As ListItem = it
+                If i.Selected Then
+                    Dim Selects As String = CurrentPath & i.Value
+                    With My.Computer.FileSystem
+                        If .DirectoryExists(Selects) Then
+                            .MoveDirectory(Selects, FileRoot & MovePosition.Text & i.Value)
+                        ElseIf .FileExists(Selects) Then
+                            .MoveFile(Selects, FileRoot & MovePosition.Text & i.Value)
+                        Else
+                            ReportError("无法移动文件:文件" & i.Value & "不存在!")
+                            Exit Sub
+                        End If
+                    End With
+                End If
+            Next
+        Catch ex As Exception
+            ReportError("无法移动文件：" & ex.Message)
+            succeed = False
+        End Try
+        If succeed Then
+            ReportError("移动成功!")
+        End If
+        RefreshPosition()
+        SetMoving.Visible = False
     End Sub
 End Class

@@ -6,3 +6,4 @@ D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.vbproj.GenerateResourc
 D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.dll
 D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.xml
 D:\Projects\EasyPrinter\EasyPrinter\obj\Debug\EasyPrinter.pdb
+D:\Projects\EasyPrinter\EasyPrinter\bin\Sumatra.exe

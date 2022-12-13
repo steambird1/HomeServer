@@ -86,6 +86,9 @@
     <Content Include="AdvancedPicturePrinter.aspx" />
     <Content Include="FileExplore.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Sumatra.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

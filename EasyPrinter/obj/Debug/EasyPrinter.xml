@@ -372,14 +372,6 @@ FileModifiers 控件。
 自动生成的字段。
 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 </remarks>
-</member><member name="F:EasyPrinter.FileExplore.ErrorDisplay">
-	<summary>
-ErrorDisplay 控件。
-</summary>
-	<remarks>
-自动生成的字段。
-若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-</remarks>
 </member><member name="F:EasyPrinter.FileExplore.FreeFSpace">
 	<summary>
 FreeFSpace 控件。
@@ -460,6 +452,14 @@ CreateCopy 控件。
 自动生成的字段。
 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 </remarks>
+</member><member name="F:EasyPrinter.FileExplore.FileMover">
+	<summary>
+FileMover 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
 </member><member name="F:EasyPrinter.FileExplore.RenameFile">
 	<summary>
 RenameFile 控件。
@@ -487,6 +487,14 @@ CreateDirectory 控件。
 </member><member name="F:EasyPrinter.FileExplore.UpdateProgressPanel">
 	<summary>
 UpdateProgressPanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ErrorDisplay">
+	<summary>
+ErrorDisplay 控件。
 </summary>
 	<remarks>
 自动生成的字段。
@@ -559,6 +567,62 @@ ConfirmCreater 控件。
 </member><member name="F:EasyPrinter.FileExplore.AbandonCreater">
 	<summary>
 AbandonCreater 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ConfirmDeletion">
+	<summary>
+ConfirmDeletion 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ConfirmDelete">
+	<summary>
+ConfirmDelete 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.AbandonDelete">
+	<summary>
+AbandonDelete 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.SetMoving">
+	<summary>
+SetMoving 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.MovePosition">
+	<summary>
+MovePosition 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.ConfirmMoving">
+	<summary>
+ConfirmMoving 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.AbandonMoving">
+	<summary>
+AbandonMoving 控件。
 </summary>
 	<remarks>
 自动生成的字段。

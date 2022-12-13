@@ -45,6 +45,7 @@
                     <asp:ListItem>图片文件</asp:ListItem>
                     <asp:ListItem Selected="True" Value="自动选择"></asp:ListItem>
                     <asp:ListItem>Excel 文档文件</asp:ListItem>
+                    <asp:ListItem>PDF 文件</asp:ListItem>
                 </asp:DropDownList>
                 <br />
                 <br />
@@ -58,7 +59,8 @@
                 同时，务必确认文件类型选择正确，否则将导致不可预料的后果！<br />
                 如果需要更多图片打印功能，请选择下方的“高级打印功能”！<br />
                 <br />
-                Excel 文件将不能选择页面方向，锁定为纵向，且将打印所有工作表！</span><br />
+                Excel 文件将不能选择页面方向，锁定为纵向，且将打印所有工作表！<br />
+                PDF 文件锁定为默认打印机，同时打印份数、方向选项都无效！</span><br />
                 <asp:Panel ID="DOCPanel" runat="server" Visible="False">
                     
                 </asp:Panel>

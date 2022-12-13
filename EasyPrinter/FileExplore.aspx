@@ -27,7 +27,7 @@
         <asp:UpdatePanel ID="FileModifiers" runat="server">
             <ContentTemplate>
                 <br />
-                <asp:Label ID="ErrorDisplay" runat="server" ForeColor="#FF5050" Visible="False"></asp:Label>
+                
                 <br />
                 <br />
                 (如果没有足够的空间，请联系网站管理者。)<br />
@@ -49,6 +49,7 @@
                 <br />
                 <span class="auto-style2">注意：不能上传超过 2 GB 的文件, 尽量不要上传超过 512 MB 的文件。<br /> 上传文件可能会花费较长的时间，其间可能没有任何提示！</span><br />&nbsp;<asp:Button ID="DeleteFile" runat="server" Text="删除文件" />
                 &nbsp;<asp:Button ID="CreateCopy" runat="server" Text="创建副本" />
+                &nbsp;<asp:Button ID="FileMover" runat="server" Text="移动文件" Width="71px" />
                 &nbsp;<asp:Button ID="RenameFile" runat="server" Text="重命名" />
                 &nbsp;<br /> <asp:Button ID="DownloadFiles" runat="server" Text="下载文件" />
                 &nbsp;<asp:Button ID="CreateDirectory" runat="server" Text="新建文件夹" />
@@ -59,6 +60,7 @@
                         <span class="auto-style1">请稍候... 正在执行操作。请勿进行其它操作！</span>
                     </ProgressTemplate>
                 </asp:UpdateProgress>
+                <asp:Label ID="ErrorDisplay" runat="server" ForeColor="#FF5050" Visible="False"></asp:Label>
                 <br />
                 <asp:Panel ID="FileRenamePanel" runat="server" Height="102px" Visible="False" BorderStyle="Solid">
                     原文件名：<asp:Label ID="OriginalFilename" runat="server"></asp:Label>
@@ -85,6 +87,15 @@
                     <asp:Button ID="ConfirmDelete" runat="server" style="height: 21px" Text="确定" Width="57px" />
                     &nbsp;<asp:Button ID="AbandonDelete" runat="server" Text="取消" Width="59px" />
                 </asp:Panel>
+                <br />
+                <asp:Panel ID="SetMoving" runat="server" BorderStyle="Solid" Visible="False">
+                    移动到：<asp:TextBox ID="MovePosition" runat="server" Width="219px">/</asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="ConfirmMoving" runat="server" style="height: 21px" Text="确定" Width="57px" />
+                    &nbsp;<asp:Button ID="AbandonMoving" runat="server" Text="取消" Width="59px" />
+                </asp:Panel>
+                <br />
                 <br />
                 <br />
                 <asp:Button ID="SelectAll" runat="server" Text="全选" Width="52px" />
