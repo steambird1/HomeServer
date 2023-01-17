@@ -4,10 +4,14 @@ Imports Microsoft.VisualBasic.FileIO
 Public Class AdvancedPicturePrinter
     Inherits System.Web.UI.Page
 
+    Public Const FileRoot As String = "F:\DiskEntry"
+
     Protected rseed As Random = New Random()
     Protected submits As List(Of WebControls.Button) = New List(Of WebControls.Button)
 
     Public ReadOnly wdStory As Integer = 6
+    Public InternalGiven As Boolean = False
+    Public InternalGivenFiles As List(Of String) = New List(Of String)
 
     Public Structure MyRange
         Public Property Begin As Integer
@@ -61,10 +65,38 @@ Public Class AdvancedPicturePrinter
             printstate.Text = "无法获取打印机类型"
             printstate.ForeColor = Color.Red
         End Try
+        Dim Queryer As String = HttpContext.Current.Request.Url.Query
+        If Queryer.Length > 0 AndAlso Queryer(0) = "?"c Then
+            Queryer = Queryer.Substring(1)
+        End If
+        Dim Queries() As String = Split(Queryer, "&")
+        For Each i In Queries
+            Dim Para() As String = Split(i, "=", 2)
+            If Para.Count() < 2 Then
+                Continue For
+            End If
+            If Para(0) = "deliver" Then
+                Continue For
+            End If
+            ' For each file procees it!
+            InternalGiven = True
+            InternalGivenFiles.Add(Encoding.UTF8.GetString(HttpServerUtility.UrlTokenDecode(Para(1))))
+        Next
+        InternalGivenInfo.Text = "来自服务器的 " & InternalGivenFiles.Count & " 已选择"
+        InternalGivenInfo.Visible = InternalGiven
+        pictureloads.Visible = Not InternalGiven
     End Sub
 
     Protected Sub LoadFilenames(ByRef frs As List(Of String), ByRef folds As List(Of String))
-        If pictureloads.HasFile Then                ' FUCK
+        If InternalGiven Then
+            For Each i In InternalGivenFiles
+                Dim RealCurrent As String = FileRoot & i
+                Dim fr As String = FindFreefile(My.Computer.FileSystem.GetName(RealCurrent))
+                My.Computer.FileSystem.CopyFile(RealCurrent, fr)
+                frs.Add(fr)
+                folds.Add(i)
+            Next
+        ElseIf pictureloads.HasFile Then                ' FUCK
             'pictureloads.SaveAs(fr)
             For Each i In pictureloads.PostedFiles
                 Dim fr As String = FindFreefile(pictureloads.FileName)

@@ -60,7 +60,7 @@
                 如果需要更多图片打印功能，请选择下方的“高级打印功能”！<br />
                 <br />
                 Excel 文件将不能选择页面方向，锁定为纵向，且将打印所有工作表！<br />
-                PDF 文件锁定为默认打印机，同时打印份数、方向选项都无效！</span><br />
+                PDF 文件锁定为默认打印机，同时方向选项无效！</span><br />
                 <asp:Panel ID="DOCPanel" runat="server" Visible="False">
                     
                 </asp:Panel>
@@ -82,7 +82,10 @@
                     <br />
                 <br />
                 <br />
-                Step 2: 选择文件<br /> 
+                Step 2: 选择文件<br />
+                <br />
+                <asp:Label ID="SelectedServerFile" runat="server" ForeColor="#009933" Visible="False"></asp:Label>
+                <br /> 
                 <br />
                 <asp:FileUpload ID="FileUpload" runat="server" ClientIDMode="Static" />
                 <br />

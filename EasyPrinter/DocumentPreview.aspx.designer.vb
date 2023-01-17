@@ -11,131 +11,104 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebFormMain
+Partial Public Class DocumentPreview
 
     '''<summary>
-    '''scm 控件。
+    '''form1 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents scm As Global.System.Web.UI.ScriptManager
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''FreeDSpace 控件。
+    '''PreviewPath 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents FreeDSpace As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents PreviewPath As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''printstate 控件。
+    '''ToPrint 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents printstate As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ToPrint As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''FileTypes 控件。
+    '''TextEncodingInfo 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents FileTypes As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents TextEncodingInfo As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''selprinters 控件。
+    '''SelectEncoding 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents selprinters As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents SelectEncoding As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''DOCPanel 控件。
+    '''DefaultDisplay 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents DOCPanel As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents DefaultDisplay As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''DocCopies 控件。
+    '''PicturePreviewPanel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents DocCopies As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents PicturePreviewPanel As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''PageOrd 控件。
+    '''PreviewImage 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents PageOrd As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents PreviewImage As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
-    '''SelectedServerFile 控件。
+    '''HTMLPreviewPanel 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents SelectedServerFile As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents HTMLPreviewPanel As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''FileUpload 控件。
+    '''RawDat 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents FileUpload As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents RawDat As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Submittor 控件。
+    '''ArchiveTree 控件。
     '''</summary>
     '''<remarks>
     '''自动生成的字段。
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
-    Protected WithEvents Submittor As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''printerr 控件。
-    '''</summary>
-    '''<remarks>
-    '''自动生成的字段。
-    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    '''</remarks>
-    Protected WithEvents printerr As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''HyperLink1 控件。
-    '''</summary>
-    '''<remarks>
-    '''自动生成的字段。
-    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    '''</remarks>
-    Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
-
-    '''<summary>
-    '''HyperLink2 控件。
-    '''</summary>
-    '''<remarks>
-    '''自动生成的字段。
-    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-    '''</remarks>
-    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents ArchiveTree As Global.System.Web.UI.WebControls.TreeView
 End Class

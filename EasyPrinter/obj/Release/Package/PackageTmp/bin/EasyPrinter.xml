@@ -6,7 +6,95 @@ EasyPrinter
 </name>
 </assembly>
 <members>
-<member name="F:EasyPrinter.AdvancedPicturePrinter.form1">
+<member name="F:EasyPrinter.DocumentPreview.form1">
+	<summary>
+form1 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.PreviewPath">
+	<summary>
+PreviewPath 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.ToPrint">
+	<summary>
+ToPrint 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.TextEncodingInfo">
+	<summary>
+TextEncodingInfo 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.SelectEncoding">
+	<summary>
+SelectEncoding 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.DefaultDisplay">
+	<summary>
+DefaultDisplay 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.PicturePreviewPanel">
+	<summary>
+PicturePreviewPanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.PreviewImage">
+	<summary>
+PreviewImage 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.HTMLPreviewPanel">
+	<summary>
+HTMLPreviewPanel 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.RawDat">
+	<summary>
+RawDat 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.DocumentPreview.ArchiveTree">
+	<summary>
+ArchiveTree 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.form1">
 	<summary>
 form1 控件。
 </summary>
@@ -25,6 +113,14 @@ HyperLink1 控件。
 </member><member name="F:EasyPrinter.AdvancedPicturePrinter.pictureloads">
 	<summary>
 pictureloads 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.AdvancedPicturePrinter.InternalGivenInfo">
+	<summary>
+InternalGivenInfo 控件。
 </summary>
 	<remarks>
 自动生成的字段。
@@ -242,6 +338,12 @@ form1 控件。
  </summary>
 	<param name="fix">文件的后缀名。</param>
 	<returns>文件路径。</returns>
+</member><member name="M:EasyPrinter.FileExplore.GenerateDownloadName(System.String,System.String)">
+	<summary>
+ 暂时未使用的函数。直接返回显示内容。
+ </summary>
+	<param name="ShownData">应当显示的内容。</param>
+	<param name="Fullpath">文件的完整路径。</param>
 </member><member name="M:EasyPrinter.FileExplore.GetFilename(System.String)">
 	<summary>
  从提供的路径中得到文件名 (可以作为 <code>My.Computer.FileSystem.GetName</code> 别名)。
@@ -391,6 +493,14 @@ FreeDSpace 控件。
 </member><member name="F:EasyPrinter.FileExplore.PrevDirs">
 	<summary>
 PrevDirs 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.FileExplore.CurrentPosLink">
+	<summary>
+CurrentPosLink 控件。
 </summary>
 	<remarks>
 自动生成的字段。
@@ -644,6 +754,14 @@ SelectAllVert 控件。
 自动生成的字段。
 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
 </remarks>
+</member><member name="F:EasyPrinter.FileExplore.SendToPicture">
+	<summary>
+SendToPicture 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
 </member><member name="F:EasyPrinter.FileExplore.FileViewers">
 	<summary>
 FileViewers 控件。
@@ -685,6 +803,19 @@ FileProperty 控件。
  用于定义 Web 项目的“My 命名空间”中可用属性的模块。
  </summary>
 	<remarks></remarks>
+</member><member name="M:EasyPrinter.DocumentPreview.GetSpaceInfo(System.Double)">
+	<summary>
+ 获取文件大小的合适表示方式。
+ </summary>
+	<param name="Value">MB 为大小的文件大小。</param>
+	<returns>合适的字符串表示。</returns>
+</member><member name="M:EasyPrinter.DocumentPreview.FindFreefile(System.String)">
+	<summary>
+ 部分服务依赖于 Server.MapPath，请勿更改。
+ 在服务器根目录下找到下一个有效文件
+ </summary>
+	<param name="fix">文件的后缀名。</param>
+	<returns>文件路径。</returns>
 </member><member name="F:EasyPrinter.WebFormMain.scm">
 	<summary>
 scm 控件。
@@ -744,6 +875,14 @@ DocCopies 控件。
 </member><member name="F:EasyPrinter.WebFormMain.PageOrd">
 	<summary>
 PageOrd 控件。
+</summary>
+	<remarks>
+自动生成的字段。
+若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+</remarks>
+</member><member name="F:EasyPrinter.WebFormMain.SelectedServerFile">
+	<summary>
+SelectedServerFile 控件。
 </summary>
 	<remarks>
 自动生成的字段。

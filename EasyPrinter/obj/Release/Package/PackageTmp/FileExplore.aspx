@@ -13,6 +13,27 @@
         .auto-style2 {
             color: #FF0000;
         }
+        a.css_to_print {
+            color: darkgreen;
+        }
+            a.css_to_print:visited {
+                color: darkgreen;
+            }
+        a.file_to_view {
+            color: brown;
+        }
+            a.file_to_view:visited {
+                color: brown;
+            }
+        a.dir_to_view {
+            color: blue;
+        }
+            a.dir_to_view:visited {
+                color: blue;
+            }
+        .auto-style3 {
+            color: #009933;
+        }
     </style>
 </head>
 <body>
@@ -39,11 +60,12 @@
                 <br />
                 <br />
                 <asp:Button ID="PrevDirs" runat="server" Height="21px" Text="&lt;- 上层目录" Width="109px" />
-                &nbsp;当前位置：<asp:TextBox ID="CurrentPosition" runat="server" Width="219px">/</asp:TextBox>
-                <asp:Button ID="GotoPosition" runat="server" Text="转到/刷新" />
+                &nbsp;当前位置：<asp:Label ID="CurrentPosLink" runat="server"></asp:Label>
                 <br />
-<br />
-                <asp:Button ID="EnterDirectory" runat="server" Text="进入目录" />
+                <br />
+                <asp:TextBox ID="CurrentPosition" runat="server" Width="369px">/</asp:TextBox>
+                <asp:Button ID="GotoPosition" runat="server" Text="转到/刷新" />
+                &nbsp;<br />&nbsp;<br /><asp:Button ID="EnterDirectory" runat="server" Text="进入目录" />
                 &nbsp;<br /> <asp:FileUpload ID="CreateFileHelper" runat="server" AllowMultiple="True" ClientIDMode="Static" />
                 &nbsp;<asp:Button ID="CreateFile" runat="server" Text="上传文件" />
                 <br />
@@ -89,7 +111,7 @@
                 </asp:Panel>
                 <br />
                 <asp:Panel ID="SetMoving" runat="server" BorderStyle="Solid" Visible="False">
-                    移动到：<asp:TextBox ID="MovePosition" runat="server" Width="219px">/</asp:TextBox>
+                    移动到：<asp:TextBox ID="MovePosition" runat="server" Width="402px">/</asp:TextBox>
                     <br />
                     <br />
                     <asp:Button ID="ConfirmMoving" runat="server" style="height: 21px" Text="确定" Width="57px" />
@@ -97,13 +119,16 @@
                 </asp:Panel>
                 <br />
                 <br />
-                <br />
                 <asp:Button ID="SelectAll" runat="server" Text="全选" Width="52px" />
                 &nbsp;<asp:Button ID="SelectAllVert" runat="server" Text="全不选" Width="52px" />
 <br />
-<br />
+                <p class="auto-style3"><asp:Button ID="SendToPicture" runat="server" Text="发送到图片打印" Width="131px" />
+                </p>
+                <br />
+                <br />
                 <asp:CheckBoxList ID="FileViewers" runat="server" Height="307px" RepeatLayout="Flow" Width="885px" AutoPostBack="True">
                 </asp:CheckBoxList>
+                <br />
                 <br />
                 <asp:Label ID="FileProperty" runat="server" Text="选择一个文件，查看其具体属性。"></asp:Label>
             </ContentTemplate>

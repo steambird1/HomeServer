@@ -4,11 +4,19 @@ Imports System.Drawing
 Public Class WebFormMain
     Inherits System.Web.UI.Page
 
+    Public Const FileRoot As String = "F:\DiskEntry"
+    Public LocalFile As String = ""     ' 空：没有本地文件可用
+
     Protected rseed As Random = New Random()
     Protected ReadOnly ftsearch As Hashtable = New Hashtable()
 
     Private Function Rounder(Value As Double) As Double
         Return Int(Value * 100) / 100
+    End Function
+
+    Public Function GetExt(filename As String) As String
+        Dim d As List(Of String) = New List(Of String)(Split(filename, "."))
+        Return d(d.Count - 1)
     End Function
 
     ''' <summary>
@@ -85,6 +93,25 @@ Public Class WebFormMain
             printstate.Text = "无法获取打印机类型"
             printstate.ForeColor = Color.Red
         End Try
+        Dim Queryer As String = HttpContext.Current.Request.Url.Query
+        If Queryer.Length > 0 AndAlso Queryer(0) = "?"c Then
+            Queryer = Queryer.Substring(1)
+        End If
+        Dim Queries() As String = Split(Queryer, "&")
+        For Each i In Queries
+            Dim Para() As String = Split(i, "=", 2)
+            If Para.Count() < 2 Then
+                Continue For
+            End If
+            Select Case Para(0)
+                Case "path"
+                    ' Get Direct-Print Path (Manually add DiskEntry)
+                    LocalFile = Encoding.UTF8.GetString(HttpServerUtility.UrlTokenDecode(Para(1)))
+                    FileUpload.Visible = False
+                    SelectedServerFile.Text = "来自服务器的文件: " & LocalFile
+                    SelectedServerFile.Visible = True
+            End Select
+        Next
     End Sub
 
     Protected Function FindFreefile(fix As String) As String
@@ -96,26 +123,29 @@ Public Class WebFormMain
         Return r
     End Function
 
-    Protected Function GetExt(filename As String) As String
-        Dim d As List(Of String) = New List(Of String)(Split(filename, "."))
-        Return d(d.Count - 1)
-    End Function
-
     Protected Sub Submittor_Click(sender As Object, e As EventArgs) Handles Submittor.Click
         ' 1. Save file
-        Dim fr As String = FindFreefile(FileUpload.FileName)
+        Dim RealFilename As String
+        If LocalFile <> "" Then
+            RealFilename = My.Computer.FileSystem.GetName(FileRoot & LocalFile)
+        Else
+            RealFilename = FileUpload.FileName
+        End If
+        Dim fr As String = FindFreefile(RealFilename)
         If FileUpload.HasFile Then                ' FUCK
             FileUpload.SaveAs(fr)
-        Else
+        ElseIf LocalFile = "" Then
             Response.Write("<script>alert('请选择文件!')</script>")
             Exit Sub
+        Else
+            My.Computer.FileSystem.CopyFile(FileRoot & LocalFile, fr)
         End If
         ' 2. Progress
         Dim wordapp As Object = Nothing
         Dim si As Integer = FileTypes.SelectedIndex
         If si = 2 Then
             ' Auto confirm
-            Dim ext As String = GetExt(FileUpload.FileName)
+            Dim ext As String = GetExt(RealFilename)
             If ftsearch.Contains(ext) Then
                 si = ftsearch(ext)
             Else
@@ -142,7 +172,9 @@ Public Class WebFormMain
                 End Try
             Case 4
                 Try
-                    Shell(Server.MapPath("Sumatra.exe") & " -print-to-default """ & fr & """", AppWinStyle.MinimizedNoFocus, True)
+                    For i = 0 To Val(DocCopies.Text) - 1
+                        Shell(Server.MapPath("Sumatra.exe") & " -print-to-default """ & fr & """", AppWinStyle.MinimizedNoFocus, True)
+                    Next
                     Response.Write("<script>alert('打印成功！');</script>")
                 Catch ex As Exception
                     Response.Write("<script>alert('内部服务器错误：调用 Sumatra 应用程序时出现 " & ex.Message & " 错误。请尝试稍后再试。')</script>")
@@ -195,8 +227,8 @@ Public Class WebFormMain
             PageOrd.Enabled = False
         ElseIf FileTypes.SelectedIndex = 4 Then
             PageOrd.Enabled = False
-            DocCopies.Text = "1"
-            DocCopies.Enabled = False
+            'DocCopies.Text = "1"
+            'DocCopies.Enabled = False
             selprinters.SelectedIndex = 0
             selprinters.Enabled = False
         End If

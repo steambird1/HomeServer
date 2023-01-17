@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdvancedPicturePrinter.aspx" />
+    <Content Include="DocumentPreview.aspx" />
     <Content Include="FileExplore.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Sumatra.exe">
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="AdvancedPicturePrinter.aspx.vb">
       <DependentUpon>AdvancedPicturePrinter.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DocumentPreview.aspx.designer.vb">
+      <DependentUpon>DocumentPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentPreview.aspx.vb">
+      <DependentUpon>DocumentPreview.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FileExplore.aspx.designer.vb">

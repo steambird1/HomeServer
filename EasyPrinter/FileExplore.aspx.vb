@@ -6,6 +6,8 @@ Public Class FileExplore
 
     Public Const FileRoot As String = "F:\DiskEntry"
     Public rseed As Random = New Random
+    Public AcceptablePictureTypes As HashSet(Of String) = New HashSet(Of String)
+    Public AcceptablePrintTypes As HashSet(Of String) = New HashSet(Of String)
 
     ''' <summary>
     ''' 目录结尾包含斜杠。
@@ -71,6 +73,20 @@ Public Class FileExplore
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        AcceptablePictureTypes.Add(".jpg")
+        AcceptablePictureTypes.Add(".jpeg")
+        AcceptablePictureTypes.Add(".png")
+        AcceptablePictureTypes.Add(".bmp")
+        AcceptablePictureTypes.Add(".gif")
+        AcceptablePrintTypes.Add(".doc")
+        AcceptablePrintTypes.Add(".docx")
+        AcceptablePrintTypes.Add(".xls")
+        AcceptablePrintTypes.Add(".xlsx")
+        AcceptablePrintTypes.Add(".txt")
+        AcceptablePrintTypes.Add(".pdf")
+        For Each i In AcceptablePictureTypes
+            AcceptablePrintTypes.Add(i)
+        Next
         If Not IsPostBack Then
             ' 第一次显示!
 
@@ -92,7 +108,7 @@ Public Class FileExplore
             RefreshPosition()
         End If
         ' 无论如何都加载大小信息
-        
+
     End Sub
 
     Protected Sub PrevDirs_Click(sender As Object, e As EventArgs) Handles PrevDirs.Click
@@ -106,6 +122,11 @@ Public Class FileExplore
         End If
     End Sub
 
+    ''' <summary>
+    ''' 暂时未使用的函数。直接返回显示内容。
+    ''' </summary>
+    ''' <param name="ShownData">应当显示的内容。</param>
+    ''' <param name="Fullpath">文件的完整路径。</param>
     Private Function GenerateDownloadName(ShownData As String, Fullpath As String) As String
         Return ShownData
     End Function
@@ -139,13 +160,33 @@ Public Class FileExplore
                 Dim i As String = GetFilename(it)
                 Dim GeneratedDirectoryName As String = GenerateDownloadName("[目录] " & i, it)
                 Dim Targets As String = HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes(CurrentPosition.Text & i & "/"))
-                FileViewers.Items.Add(New ListItem("<a href=""" & Request.Path & "?path=" & Targets & """>" & GeneratedDirectoryName & "</a>", i))
+                FileViewers.Items.Add(New ListItem("<a class=""dir_to_view"" href=""" & Request.Path & "?path=" & Targets & """>" & GeneratedDirectoryName & "</a>", i))
             Next
             For Each it In .GetFiles(CurrentPath)
                 Dim i As String = GetFilename(it)
-                FileViewers.Items.Add(New ListItem(GenerateDownloadName(i, CurrentPath & it), i))
+                Dim PrintName As String = HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes(CurrentPosition.Text & i))
+                Dim RealSuffix As String = ""
+                If AcceptablePrintTypes.Contains(GetExtension(i)) Then
+                    RealSuffix = " <a class=""css_to_print"" target=""_blank"" href=""/WebFormPrinter.aspx?path=" & PrintName & """>转到打印</a>"
+                End If
+                Dim ViewPrefix As String = " <a class=""file_to_view"" target=""_blank"" href=""/DocumentPreview.aspx?path=" & PrintName & """>" & i & "</a>"
+                FileViewers.Items.Add(New ListItem(GenerateDownloadName(ViewPrefix & RealSuffix, CurrentPath & it), i))
             Next
         End With
+        ' Describe the path...
+        Dim RootEncoded As String = HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes("/"))
+        CurrentPosLink.Text = "<a href=""" & Request.Path & "?path=" & RootEncoded & """>根目录</a>"
+        Dim Spls() As String = Split(CurrentPosition.Text, "/")
+        Dim Prefixs As String = "/"
+        For Each i In Spls
+            If i.Length <= 0 Then
+                Continue For
+            End If
+            Dim Targets As String = HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes(Prefixs & i & "/"))
+            Prefixs &= i & "/"
+            CurrentPosLink.Text &= " &gt; <a href=""" & Request.Path & "?path=" & Targets & """>" & i & "</a>"
+        Next
+        ' End/
         FileProperty.Text = "选择一个文件，查看其具体属性。"
         UpdateDiskInfo()
     End Sub
@@ -190,11 +231,11 @@ Public Class FileExplore
                     Dim Selects As String = CurrentPath & i.Value
                     If .DirectoryExists(Selects) Then
                         Dim Desc = .GetDirectoryInfo(Selects)
-                        FileProperty.Text &= "文件夹: " & i.Value & "<br />" & "创建日期: " & Desc.CreationTime.ToString() & "<br />" & "<br />"
+                        FileProperty.Text &= "文件夹: " & i.Value & "<br />" & "创建日期: " & Desc.CreationTime.ToString() & "<br />" & "修改日期：" & Desc.LastWriteTime.ToString() & "<br />" & "<br />"
                     ElseIf .FileExists(Selects) Then
                         Dim Desc = .GetFileInfo(Selects)
                         SumSize += Desc.Length / 1024 / 1024
-                        FileProperty.Text &= "文件: " & i.Value & "<br />" & "创建日期: " & Desc.CreationTime.ToString() & "<br />" & "大小: " & GetSpaceInfo(Desc.Length / 1024 / 1024) & "<br />" & "<br />"
+                        FileProperty.Text &= "文件: " & i.Value & "<br />" & "创建日期: " & Desc.CreationTime.ToString() & "<br />" & "修改日期：" & Desc.LastWriteTime.ToString() & "<br />" & "大小: " & GetSpaceInfo(Desc.Length / 1024 / 1024) & "<br />" & "<br />"
                     End If
                 End If
             Next
@@ -415,5 +456,27 @@ Public Class FileExplore
         End If
         RefreshPosition()
         SetMoving.Visible = False
+    End Sub
+
+    Protected Sub SendToPicture_Click(sender As Object, e As EventArgs) Handles SendToPicture.Click
+        If FileViewers.SelectedIndex < 0 Then
+            Exit Sub
+        End If
+        Dim FinalPath As String = "/AdvancedPicturePrinter.aspx?deliver=1"  ' 标志
+        Dim Counter As Integer = 1
+        For Each it In FileViewers.Items
+            Dim i As ListItem = it
+            If i.Selected Then
+                Dim Selects As String = CurrentPath & i.Value
+                If Not AcceptablePictureTypes.Contains(GetExtension(Selects)) Then
+                    ReportError("不是图片格式: " & i.Value)
+                    Exit Sub
+                End If
+                Dim TransformPath As String = CurrentPosition.Text & i.Value
+                FinalPath &= "&" & Counter & "=" & HttpServerUtility.UrlTokenEncode(Encoding.UTF8.GetBytes(TransformPath))
+                Counter += 1
+            End If
+        Next
+        Response.Redirect(FinalPath)
     End Sub
 End Class

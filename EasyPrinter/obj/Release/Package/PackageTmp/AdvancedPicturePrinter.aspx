@@ -23,7 +23,12 @@
         <br />
         <br />
         <strong>Step 1: 选择文件</strong><p>
-            选择照片：<asp:FileUpload ID="pictureloads" runat="server" AllowMultiple="True" />
+            选择照片：</p>
+        <p>
+            <asp:FileUpload ID="pictureloads" runat="server" AllowMultiple="True" />
+        </p>
+        <p>
+            <asp:Label ID="InternalGivenInfo" runat="server" ForeColor="#009933" Visible="False"></asp:Label>
         </p>
         <p>
             <strong>Step 2: 配置通用设置</strong></p>

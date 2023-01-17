@@ -68,6 +68,15 @@ Partial Public Class FileExplore
     Protected WithEvents PrevDirs As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''CurrentPosLink 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents CurrentPosLink As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''CurrentPosition 控件。
     '''</summary>
     '''<remarks>
@@ -345,6 +354,15 @@ Partial Public Class FileExplore
     '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
     '''</remarks>
     Protected WithEvents SelectAllVert As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''SendToPicture 控件。
+    '''</summary>
+    '''<remarks>
+    '''自动生成的字段。
+    '''若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+    '''</remarks>
+    Protected WithEvents SendToPicture As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''FileViewers 控件。
